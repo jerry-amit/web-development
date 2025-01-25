@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selector</title>
+<!-- <link rel="stylesheet" href="style.css"> -->
+ <style>
+  /*  element selector*/
+    div{
+       /* background-color: red;*/
+    }
+    
+    /* class selector*/
+    .red{
+        background-color: red;
+    }
+
+/* id selector */
+#green{
+    background-color: green;
+}
+
+/* child selector */
+
+div > p{
+    color: blue;
+    background-color: brown;
+}
+
+/* Desendent selector*/
+div p{
+    color: blue;
+    background-color: brown;
+}
+
+/*UNIVERSAL SSELECTOR*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Pseudo selector */
+a:visited{
+    color:rgb(30, 187, 56);
+}
+
+a:link{
+    color: rgb(211, 97, 4);
+}
+
+a:active{
+    background-color: brown;
+}
+
+a:hover{
+    background-color: pink;
+}
+
+
+p:first-child{
+    background-color: aqua;
+}
+
+</style>
+</head>
+<body>
+
+    <div class="one">
+        <p>i am one</p>
+        <p> i am two</p>
+
+    </div>
+
+    <div class="red">
+        I am div
+    </div>
+
+    <div id="green">
+        i am div2
+  
+
+    <article>
+        <p>i am a para selector</p>
+    </article>
+        
+   
+</div>
+ 
+<a href="http://www.whatsapp.com">goto google</a>
+<a href="http://www.facebook.com">goto Facebook</a>
+
+
+</body>
+</html>
