@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css sepecificity & cascade</title>
+    <style>
+        /*The spcificity of the selector is 10*/
+        h1{
+            color: aqua;
+        }
+        /*The spcificity of the selector is  1+10=11*/
+        h1.yellow{
+            color: yellow;
+        }
+        /*The spcificity of the selector is 10*/
+        .cred{
+            color: red;
+        }
+        /*The spcificity of the selector is 10*/
+                .cpurple{
+            color: purple;
+        }
+
+        /*The spcificity of the selector is 10*/
+        
+        /*[data-x=a]{
+            background-color: brown;
+        }*/
+        
+        /*The spcificity of the selector is 1+10+10+10+10=41*/
+        a.harryclass.rohan-class[href]:hover{
+            color: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+    1.position and order of  selector ,last order will 1st
+    2.specificity means priority/ precedence ex. inline style=1000<"id"=100<"class / attributes=10<"element selector=01"<"universal selector=1"
+    3.origin: if user dont mention heading then browser define itself(user agent sylesheet)
+    4.important: important means upper level in all =10000
+
+    <div>
+        <h1 style="color: blue;" class="yellow cred cpurple" data-x="a"> CSS specificity</h1>
+    </div>
+</body>
+</html>
