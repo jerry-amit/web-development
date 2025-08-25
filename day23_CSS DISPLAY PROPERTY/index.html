@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS DISPLAY</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+            .box{
+                border: 2px solid blue;
+                display: inline-block;
+                padding: 45px;
+                margin: 34px;
+                display: flex ;   /* both will use to center the text*/
+                justify-content: center;
+
+
+                /*but display inline will inline in a manner*/
+                  display: flex ; 
+            }
+
+            .box1{
+                display : none;  /* to hide the above property */
+                visibility: hidden;  /* to hide the above property but space will be present*/
+            }
+    </style>
+</head>
+<body>
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/display -->
+    <div class="box">
+        i am a box
+    </div>
+    <div class="box box1">
+        i am a another box
+    </div>
+
+    <span>i am a 
+
+    </span>
+    <span>
+        good boy
+    </span>
+</body>
+</html>
