@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more selectors on css selectors</title>
+    <style>
+       /* .box:first-child{
+            background-color: red;
+            color: yellow;
+        }
+
+        .box::first-line {
+            color: yellow; } */
+
+
+     /*   .boxes *{
+            color: blue;
+            border: 2px solid black;
+        }
+
+       p,a, .box, [data-color="primary"]{  /*    is used for grouping element p,a,box*/
+          /*  padding-top:45px ;
+        }*/
+
+        /*.box:nth-child(odd){ /* nth child pesudeo  selector*/
+           /* background-color: blue;
+        }*/
+
+        /*.box:nth-last-child(1){
+            background-color: red;
+        }*/
+
+        .boxes::before{
+            content: "Jerry is good";
+            color: blue;
+        }
+
+        .boxes::after{
+            content: "I Am good";
+            color: rgb(201, 5, 93);
+        }
+
+        ::selection{
+            color: aqua;
+            background-color: black;
+        }
+
+
+      .box::first-letter{
+        color: peru;
+        font-size: 45px;
+        font-weight: 300px;
+               
+      }
+
+      input::placeholder{
+        color: blue;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box"> I Aam first child</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <input type="text" placeholder="Type your name here.." name="" id="">
+        
+    </div>
+</body>
+
+</html>
