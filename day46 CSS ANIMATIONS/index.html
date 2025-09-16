@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ANIMATIONS </title>
+    <style>
+        .container{
+            background-color: rgb(115, 205, 205);
+            height: 80vh;
+            width: 30vw;
+        }
+
+        .box{
+          /*  background-color: greenyellow;*/
+            height: 34px;
+            width: 45px;
+          /*  background-color: aqua;*/
+           /* <!-- animation: name duration timing-function delay iteration-count direction fill-mode; -->*/
+      /*  animation-name: jerrykaanimation;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0, 0, 0, 0.86);
+        animation-delay: 1s;
+        animation-direction: alternate-reverse;
+        animation-play-state: paused;*/
+
+        /* shorthand*/
+        animation: jerrykaanimation 3s ease-in-out  3s 1 forwards ,
+        jerry2 3s ease-in-out  3s 1 ;/*forward stops at the end*/
+        }
+
+
+    @keyframes jerrykaanimation {
+        from{
+          background-color: red;
+
+        }
+        to{
+            background-color: yellow;
+              transform: translateX(1000px);
+        }
+    }
+
+    @keyframes jerry2 {
+        0%{transform:rotate(100deg)
+        }
+       20%{transform:rotate(200deg)
+    }
+        40%{transform:rotate(220deg)
+        }
+        80%{transform:rotate(300deg)
+        }
+        90%{transform:rotate(310deg)
+        }
+        100%{transform:rotate(320deg)
+        }
+        
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+</html>
