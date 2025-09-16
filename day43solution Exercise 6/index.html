@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solution of problem 6 nav bar using flexbox</title>
+    <style>
+        .logo {
+
+            /* background-color: blue;*/
+        }
+
+        .logo img {
+            width: 164px;
+            height: px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: "Segoe UI";
+        }
+
+
+        .right ul {
+            gap: 34px;
+            display: flex;
+        }
+
+        .right ul li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .right ul li nav{
+            padding: 0 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+            <div class="right">
+                <ul>
+                    <li> <span> products </span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+                            height="20" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg> </li>
+                    <li> <span> pricing </span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+                            height="20" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg> </li>
+                    <li> <span> Resource </span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+                            height="20" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg> </li>
+                    <li> <span> About us </span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+                            height="20" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></li>
+                    <li><img src="logo2.png" alt=""></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>
