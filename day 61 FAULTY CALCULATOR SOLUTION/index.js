@@ -1,0 +1,37 @@
+console.log("THE FAULTY CALCULATOR")
+/*This faulty calculator does following:
+1.it takes 2 number as input from the user
+2. It performs wrong operations as follows:
+
++ ----> -
+* ----> +
+- ----> /
+/ ----> **
+
+It performs wrong operation 10% of the times
+
+*/
+let random = Math.random()
+console.log(random)
+let a = prompt("Enter first number")
+let c = prompt("Enter operation ")
+let b = prompt("Enter second number")
+
+let obj ={
+    " + ":" - ",
+    " * ":" + ",
+    " - ":" / ",
+    " / ":" ** ",
+}
+
+
+if(random>0.1)
+{
+    console.log(`the result is (${a} ${c} ${b}`)
+    alert(`the result is ${eval(`${a} ${c} ${b}`)}`)
+}
+
+else{
+    c = obj[c]
+    alert(`the result is ${eval(`${a} ${c} ${b}`)}`)
+}
