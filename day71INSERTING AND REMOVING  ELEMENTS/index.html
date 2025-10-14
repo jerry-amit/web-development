@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inserting And Removing Elements</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container red bg-green">
+        <div class=" box" style="display:flex" data-createdby = "jerry" data-conceptby="Rohan" >Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+ 
+    <script>
+
+      /*  let div = document.createElement("div");
+        div.innerHTML = "I have been Inserted <b> I  Have been Inserted By jerry </b>"
+        div.setAttribute("class", "created");
+        document.querySelector(".container").append(div);
+        document.querySelector(".container").before(div);
+        document.querySelector(".container").after(div);
+        document.querySelector(".container").prepend(div);*/
+
+        let cont = document.querySelector(".container")
+        cont.insertAdjacentHTML("afterbegin","<b> i Am under the water ....</b>")
+        cont.insertAdjacentHTML("afterend","<b> i Am under the water ....</b>")
+        cont.insertAdjacentHTML("beforebegin","<b> i Am under the water ....</b>")
+        cont.insertAdjacentHTML("beforeend","<b> i Am under the water ....</b>")
+
+
+        document.querySelector(".box").remove()
+        document.querySelector(".container").classList
+        document.querySelector(".container").className
+        document.querySelector(".container").classList.add("Jerry")
+        document.querySelector(".container").classList.remove("Jerry")
+        document.querySelector(".container").classList.toggle("red")
+    </script>
+       </div>
+</body>
+</html>
